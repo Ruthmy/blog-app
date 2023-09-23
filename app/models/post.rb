@@ -16,9 +16,6 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: :post_id
   has_many :likes, foreign_key: :post_id
 
-  # validates :title, presence: true
-  # validates :text, presence: true
-
   def update_user_posts_counter
     author.update(posts_counter: author.posts.count)
   end
