@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id            :bigint           not null, primary key
+#  name          :string
+#  photo         :string
+#  bio           :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  posts_counter :integer
+#
+
+one:
+  name: MyString
+  photo: MyString
+  bio: MyText
+
+two:
+  name: MyString
+  photo: MyString
+  bio: MyText
