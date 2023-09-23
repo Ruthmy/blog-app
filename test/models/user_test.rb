@@ -10,7 +10,7 @@
 #  updated_at    :datetime         not null
 #  posts_counter :integer
 #
-require "test_helper"
+require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   # test "the truth" do
