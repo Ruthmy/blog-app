@@ -14,7 +14,6 @@
         <li><a href="#built-with">🛠 Built With</a></li>
         <li><a href="#tech-stack">Tech Stack</a></li>
         <li><a href="#key-features">Key Features</a></li>
-        <li><a href="#future-features">Future Features</a></li>
       </ul>
     </li>
     <li><a href="#live-demo">🚀 Live Demo</a></li>
@@ -81,21 +80,6 @@ The project is built using the following technologies:
 Please note: Each feature will be marked with an "x" when it is fully implemented and operational.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
----
-
-### 🔭 Upcoming Features <a name="future-project"></a>
-
-- [ ] Search functionality for locating specific articles.
-- [ ] User profiles with customizable avatars.
-- [ ] Article categories and tagging.
-- [ ] Rich text editor for formatting articles.
-- [ ] Social media sharing options for articles.
-- [ ] API endpoints for external integrations.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ---
 
@@ -174,8 +158,14 @@ rspec spec
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a id="future-features"></a>
-* Save the information in a PostgreSQL database.
-* Let the user to remove and modify the information.
+
+- [ ] Search functionality for locating specific articles.
+- [ ] User profiles with customizable avatars.
+- [ ] Article categories and tagging.
+- [ ] Rich text editor for formatting articles.
+- [ ] Social media sharing options for articles.
+- [ ] API endpoints for external integrations.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
