@@ -16,11 +16,19 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: :post_id
   has_many :likes, foreign_key: :post_id
 
-  def update_user_posts_counter
-    author.update(posts_counter: author.posts.count)
-  end
+  # validates :title, presence: true
+  # validates :text, presence: true
+
+  after_create :update_user_posts_counter
+  after_destroy :update_user_posts_counter
 
   def recent_comments
     comments.order(created_at: :desc).limit(5)
+  end
+
+  private
+
+  def update_user_posts_counter
+    author.update(posts_counter: author.posts.count)
   end
 end
