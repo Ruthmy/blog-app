@@ -1,15 +1,3 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id            :bigint           not null, primary key
-#  name          :string
-#  photo         :string
-#  bio           :text
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  posts_counter :integer          default(0)
-#
 class User < ApplicationRecord
   has_many :posts, foreign_key: :author_id
   has_many :comments, foreign_key: :user_id
