@@ -7,7 +7,6 @@
 <!-- TABLE OF CONTENTS -->
 
 <summary><h1>📗 Table of Contents</h1></summary>
-<details>
   <ul>
     <li><a href="#about-project">📖 About the Project</a>
       <ul>
@@ -34,7 +33,6 @@
     <li><a href="#acknowledgements">🙏 Acknowledgements</a></li>
     <li><a href="#license">📝 License</a></li>
   </ul>
-</details>
 
 ---
 
@@ -81,8 +79,8 @@ Please note: Each feature will be marked with an "x" when it is fully implemente
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!--
 ---
-
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 <br>
@@ -90,7 +88,7 @@ Please note: Each feature will be marked with an "x" when it is fully implemente
 - Unfortunately, there is no live demo available for this project at the moment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+-->
 
 ---
 
