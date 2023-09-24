@@ -8,7 +8,7 @@
 #  bio           :text
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  posts_counter :integer
+#  posts_counter :integer          default(0)
 #
 class User < ApplicationRecord
   has_many :posts, foreign_key: :author_id

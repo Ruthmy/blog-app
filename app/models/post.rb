@@ -8,8 +8,8 @@
 #  text             :text
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
-#  comments_counter :integer
-#  likes_counter    :integer
+#  comments_counter :integer          default(0)
+#  likes_counter    :integer          default(0)
 #
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id
