@@ -15,7 +15,7 @@
         <li><a href="#key-features">Key Features</a></li>
       </ul>
     </li>
-    <li><a href="#live-demo">🚀 Live Demo</a></li>
+    <!-- <li><a href="#live-demo">🚀 Live Demo</a></li> -->
     <li><a href="#getting-started">💻 Getting Started</a>
       <ul>
         <li><a href="#setup">Setup</a></li>
