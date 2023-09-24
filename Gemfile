@@ -60,6 +60,8 @@ group :development, :test do
   # Para el debug
   gem 'pry'
   gem 'pry-doc'
+  # For unit test with Rspec
+  gem 'rspec-rails'
 end
 
 group :development do
