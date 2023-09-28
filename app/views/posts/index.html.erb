@@ -1,0 +1,46 @@
+<section class="post-index">
+  <h1>index post</h1>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <th>
+            <%= image_tag @user.photo, width: 100 %>
+          </th>
+          <td>
+            <h3>
+              <%= link_to @user.name, user_path(@user) %>
+            </h3>
+          </td>
+          <td>
+            <p>Number of post: <%= @user.posts.count %>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="all-post">
+    <h2>All Posts</h2>
+    <% @posts.each_with_index do |post, index| %>
+    <div class="post">
+      <div class="post-header">
+        <h3>
+          Post # <%= index + 1 %> <%= link_to post.title, user_post_path(@user, post) %>
+        </h3>
+      </div>
+      <div class="post-content">
+        <%= post.text %>
+      </div>
+      <div class="post-footer">
+        <p>
+          <%= link_to "Read more", user_post_path(@user, post) %>
+        </p>
+      </div>
+      <div class="post-comments">
+        <p>Comments: <%= post.comments.count %>, Likes: <%= post.likes.count %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</section>
