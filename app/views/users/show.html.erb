@@ -1,5 +1,5 @@
 <section class="user">
-  show del users
+<h1>Show/Deatils users</h1>
   <div>
 			<%= image_tag @user.photo, width: 100 %>
       <%= link_to @user.name, user_path(@user) %>
@@ -14,12 +14,9 @@
 	<div>
 		<!-- Render post_recent to show the last 3 post -->
 		<% @user.post_recent.each_with_index do |post, index| %>
-			<h3>Post # <%= index + 1 %></h3>
-			<%= post.author.name %>
-			<%= post.title %>
-			<%= post.text %>
-			Comments: <%= post.comments_counter %>
-			Likes: <%= post.likes_counter %>
+			<h3>Post # <%= index + 1 %> <span><%= post.title %></span></h3>
+			<p><%= post.text %></p>
+			<p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
       <%= link_to "See post", user_post_path(@user, post) %>
 		<% end %>
 	</div>
