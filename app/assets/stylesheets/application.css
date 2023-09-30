@@ -18,7 +18,8 @@
   --font: 'Montserrat', sans-serif;
   --font-title: 3rem;
   --font-p-size: 1.4rem;
-  --font-h3-size: 2.5rem;
+  --font-h2-size: 2.5rem;
+  --font-h3-size: 2rem;
   --font-count-size: 1.2rem;
   --background: #e8e8e8;
 }
@@ -62,6 +63,8 @@ body {
 
 h1 { font-size: var(--font-title); }
 
+h2 { font-size: var(--font-h2-size); }
+
 h3 { font-size: var(--font-h3-size); }
 
 p { font-size: var(--font-p-size); }
@@ -89,6 +92,16 @@ li { list-style: none; }
   align-items: center;
 }
 
+.see-all-post {
+  text-align: center;
+  font-size: var(--font-p-size);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #88a8c2;
+  cursor: pointer;
+}
+
 /* Post card & Post comment card Partials */
 
 .post-item,
@@ -108,6 +121,7 @@ li { list-style: none; }
 
 .see-post-link {
   text-align: center;
+  font-size: var(--font-p-size);
 }
 
 /* User Card Partial */
