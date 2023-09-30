@@ -1,10 +1,8 @@
 <h1>Show/Deatils users</h1>
 <% if @user %>
 	<section class="user">
-		<div>
-			<%= image_tag @user.photo, width: 100 %>
-			<%= link_to @user.name, user_path(@user) %>
-			Number of post: <%= @user.posts.count %>
+		<div>			
+			<%= render partial: "shared/user_card", locals: { user: @user } %>
 		</div>
 	</section>
 	<section class="bio">
