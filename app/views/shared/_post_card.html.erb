@@ -1,7 +1,7 @@
 <div class="post-item flex-column">
     <!-- Render post_recent to show the last 3 post -->
     <% @user.post_recent.each_with_index do |post, index| %>
-        <h3>Post # <%= index + 1 %>
+        <h3>Post <%= index + 1 %>
             <span>
                 <%= post.title %>
             </span>
