@@ -3,25 +3,7 @@
   <%= render partial: "shared/user_card", locals: { user: @user } %>
   <div class="all-post">
     <h2>All Posts</h2>
-    <% @posts.each_with_index do |post, index| %>
-    <div class="post">
-      <div class="post-header">
-        <h3>
-          Post # <%= index + 1 %> <%= link_to post.title, user_post_path(@user, post) %>
-        </h3>
-      </div>
-      <div class="post-content">
-        <%= post.text %>
-      </div>
-      <div class="post-footer">
-        <p>
-          <%= link_to "Read more", user_post_path(@user, post) %>
-        </p>
-      </div>
-      <div class="post-comments">
-        <p>Comments: <%= post.comments.count %>, Likes: <%= post.likes.count %></p>
-      </div>
-    </div>
-    <% end %>
+    <%= render partial: "shared/post_comment_card", collection: @posts %>
+    <!-- Pagination -->
   </div>
 </section>
