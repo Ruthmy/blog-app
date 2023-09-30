@@ -13,3 +13,84 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --font: 'Montserrat', sans-serif;
+  --font-title: 3rem;
+  --font-p-size: 1.4rem;
+  --font-h3-size: 2.5rem;
+  --font-count-size: 1.2rem;
+  --background: #e8e8e8;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+
+  outline: 1px solid red !important;
+}
+
+body {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Font styles */
+
+h1 { font-size: var(--font-title); }
+
+h3 { font-size: var(--font-h3-size); }
+
+p { font-size: var(--font-p-size); }
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+/* User Card Partial */
+
+.user-card {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.user-image img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.user-details {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.post-count {
+  font-size: var(--font-count-size);
+  text-align: right;
+}
