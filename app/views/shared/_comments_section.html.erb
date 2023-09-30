@@ -1,0 +1,7 @@
+<div class="comments flex-column">
+    <% post.recent_comments.each_with_index do |comment, index| %>
+        <p>
+            <%= comment.author.name %>: <%= comment.text %>
+        </p>
+    <% end %>
+</div>
