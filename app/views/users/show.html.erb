@@ -1,26 +1,25 @@
-<h1>Show/Deatils users</h1>
+<h1>Show/Details users</h1>
 <% if @user %>
 	<section class="user">
 		<div>			
 			<%= render partial: "shared/user_card", locals: { user: @user } %>
 		</div>
 	</section>
-	<section class="bio">
+	<section class="bio flex-column">
 		<h3>Bio</h3>
 		<p><%= @user.bio %></p>
 	</section>
-	<section class="posts">
-		<div>
+	<section class="posts flex-column">
+		<div class="post-item flex-column">
 			<!-- Render post_recent to show the last 3 post -->
 			<% @user.post_recent.each_with_index do |post, index| %>
 				<h3>Post # <%= index + 1 %> <span><%= post.title %></span></h3>
 				<p><%= post.text %></p>
-				<p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-				<%= link_to "See post", user_post_path(@user, post) %>
+				<p class="counter">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+				<%= link_to "See post", user_post_path(@user, post), class: "see-post-link" %>
 			<% end %>
 		</div>
-		<br><br>
-		<div>
+		<div class="all-posts flex-column">
 			<%= link_to "See all post", user_posts_path(@user) %>
 		</div>
 	</section>
