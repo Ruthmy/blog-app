@@ -45,6 +45,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
+  padding: 2rem;
 }
 
 .flex-column {
@@ -69,12 +70,44 @@ a { text-decoration: none; }
 
 li { list-style: none; }
 
+/* show users */
+
+.bio {
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.posts {
+  padding: 2rem 2rem;
+}
+
+.post-item {
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+}
+
+.counter {
+  text-align: right;
+}
+
+.all-posts {
+  padding: 1rem;
+  align-items: center;
+}
+
+.see-post-link {
+  text-align: center
+  ;
+}
+
 /* User Card Partial */
 
 .user-card {
   display: flex;
   align-items: center;
-  padding: 0 2rem;
   margin-bottom: 2rem;
 }
 
@@ -88,6 +121,7 @@ li { list-style: none; }
 .user-details {
   flex-grow: 1;
   text-align: center;
+  gap: 1rem;
 }
 
 .post-count {
