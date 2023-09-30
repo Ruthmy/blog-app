@@ -1,0 +1,24 @@
+
+<div class="post-comments flex-column">
+    <!-- Render post_recent to show the last 3 post -->
+    <% @user.post_recent.each_with_index do |post, index| %>
+        <h3>Post <%= index + 1 %>
+            <span>
+                <%= post.title %>
+            </span>
+        </h3>
+        <p>
+            <%= post.text %>
+        </p>
+        <p class="counter">
+            Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+        </p>
+        <div class="comments flex-column">
+            <% post.recent_comments.each_with_index do |comment, index| %>
+                <p>
+                    <%= comment.author.name %>: <%= comment.text %>
+                </p>
+            <% end %>
+        </div>
+    <% end %>
+</div>
