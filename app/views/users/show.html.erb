@@ -12,7 +12,7 @@
 	<section class="posts flex-column">
 		<%= render partial: "shared/post_card", collection: @user.post_recent %>
 		<div class="all-posts flex-column">
-			<%= link_to "See all post", user_posts_path(@user) %>
+			<%= link_to "See all post", user_posts_path(@user), class: "see-all-post" %>
 		</div>
 	</section>
 <% else %>
