@@ -1,7 +1,8 @@
 <section class="post-index">
   <%= render partial: "shared/user_card", locals: { user: @user } %>
   <div class="all-post">
-    <%= render partial: "shared/post_comment_card", collection: @posts %>
+    <%= render partial: "shared/post_comment_card", local: { posts: @posts } %>
     <!-- Pagination -->
   </div>
+  <p><%= link_to "Back", :back %></p>
 </section>
