@@ -1,8 +1,8 @@
 <div class="user-card">
   <div class="user-image">
-    <%= image_tag user.photo, width: 100 %>
+    <%= image_tag user.photo %>
   </div>
-  <div class="user-details">
+  <div class="user-details flex-column">
     <h3>
       <%= link_to user.name, user_path(user) %>
     </h3>
