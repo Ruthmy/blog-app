@@ -10,15 +10,7 @@
 		<p><%= @user.bio %></p>
 	</section>
 	<section class="posts flex-column">
-		<div class="post-item flex-column">
-			<!-- Render post_recent to show the last 3 post -->
-			<% @user.post_recent.each_with_index do |post, index| %>
-				<h3>Post # <%= index + 1 %> <span><%= post.title %></span></h3>
-				<p><%= post.text %></p>
-				<p class="counter">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-				<%= link_to "See post", user_post_path(@user, post), class: "see-post-link" %>
-			<% end %>
-		</div>
+		<%= render partial: "shared/post_card", collection: @user.post_recent %>
 		<div class="all-posts flex-column">
 			<%= link_to "See all post", user_posts_path(@user) %>
 		</div>
