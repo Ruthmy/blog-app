@@ -1,47 +1,23 @@
 <section class="post-show">
-  <h1>Show/Deatils post</h1>
   <div class="post-header">
-    <h3>Post #1 by username</h3>
-    <i>Comments:x, Likes:y</i>
+    <h2>
+      Post # by <%= @user.name %>
+    </h2>
+    <p class="counter"><i>Comments:x, Likes:y</i></p>
     <br><br>
   </div>
   <div class="post-content">
-    <%= @posts.text %>
+    <p>
+      <%= @posts.text %>
+    </p>
   </div>
   <br><br>
 </section>
 <hr />
-<section class="post-comments">
-  <ul>
-    <li>
-      <p>Username: Comment 1</p>
-    </li>
-    <li>
-      <p>Username: Comment 2</p>
-    </li>
-    <li>
-      <p>Username: Comment 3</p>
-    </li>
-    <li>
-      <p>Username: Comment 4</p>
-    </li>
-    <li>
-      <p>Username: Comment 5</p>
-    </li>
-    <li>
-      <p>Username: Comment 6</p>
-    </li>
-    <li>
-      <p>Username: Comment 7</p>
-    </li>
-    <li>
-      <p>Username: Comment 8</p>
-    </li>
-    <li>
-      <p>Username: Comment 9</p>
-    </li>
-    <li>
-      <p>Username: Comment 10</p>
-    </li>
-  </ul>
-</section>
+<% if @posts.comments_counter > 0 %>
+  <%= render partial: "shared/comments_section", locals: { post: @posts } %>
+<% else %>
+  <p>No comments yet</p>
+<% end %>
+<hr />
+<%= link_to "Back", :back %>
