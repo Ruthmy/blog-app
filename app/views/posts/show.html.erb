@@ -6,6 +6,12 @@
     <p class="counter"><i>Comments: <%= @posts.comments_counter %>, Likes: <%= @posts.likes_counter %></i></p>
     <br><br>
   </div>
+  <div class="add-like">
+    <%= form_tag user_post_likes_path(@posts.author, @posts), method: :post do %>
+      <%= hidden_field_tag :id, @posts.id %>
+      <%= image_tag 'heart.png', alt: 'Like button', class: 'cursor-pointer', onclick: 'this.closest("form").submit();', width: 25 %>
+    <% end %>
+  </div>
   <div class="post-content">
     <p>
       <%= @posts.text %>
@@ -14,10 +20,17 @@
   <br><br>
 </section>
 <hr />
+<h3>Comments</h3>
+<hr />
+<br>
+<%= link_to "Add new Comment", new_user_post_comment_path(post_id: @posts.id) %>
+<br><br>
+<hr />
+<!--  -->
 <% if @posts.comments_counter > 0 %>
   <%= render partial: "shared/comments_section", locals: { post: @posts } %>
 <% else %>
   <p>No comments yet</p>
 <% end %>
 <hr />
-<p><%= link_to "Back", :back %></p>
+<p><%= link_to "Back", :back %> | <%= render partial: "shared/link_main" %></p>

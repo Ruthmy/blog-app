@@ -1,0 +1,20 @@
+<section class="add-message">
+    <h2>Add new Comment</h2>
+    <h4>(with the current user: <%= @user.name %>)</h4>
+
+    <% if flash[:alert].present? %>
+        <div class="alert">
+            <%= flash[:alert] %>
+        </div>
+    <% end %>
+
+    <%= form_with model: [@user, @post, @comment], url:
+    user_post_comments_path(@user, @post) do |form| %>
+        <div class="form-message_text flex-column">
+            <%= form.label :text %>
+            <%= form.text_area :text, size: "30x5" %>
+        </div>
+        <%= form.submit %>
+    <% end %>
+</section>
+<p><%= link_to "Back", :back %> | <%= render partial: "shared/link_main" %></p>

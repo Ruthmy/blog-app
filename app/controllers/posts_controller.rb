@@ -11,4 +11,26 @@ class PostsController < ApplicationController
     # found the post which 'id' is the same as the parameter 'id' on the URL
     @posts = Post.find(params[:id])
   end
+
+  def new
+    @user = current_user
+    @new_post = Post.new
+  end
+
+  def create
+    @post = current_user.posts.new(post_params)
+    if @post.save
+      flash[:notice] = 'Post successfully added!'
+      redirect_to user_path(current_user)
+    else
+      flash[:alert] = 'Post could not be added.'
+      redirect_to new_user_post_path(current_user)
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
