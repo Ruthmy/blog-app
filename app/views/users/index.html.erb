@@ -1,22 +1,9 @@
-<h1>Index Users</h1>
 <section class="user-list">
-<div class="table-responsive">
-  <table class="table table-hover">
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <th>
-            <%= image_tag user.photo, width: 100 %>
-          </th>
-          <td>
-            <h3><%= link_to user.name, user_path(user) %></h3>
-          </td>
-          <td>
-            <p>Number of post: <%= user.posts.count %></p>
-          </td>
-        </tr>
-        <% end %>
-    </tbody>
-  </table>
-</div>
+  <% if @users %>
+    <% @users.each do |user| %>
+      <%= render partial: "shared/user_card", locals: { user: user } %>
+    <% end %>
+  <% else %>
+    <p>There's no users, please</p>
+  <% end %>
 </section>

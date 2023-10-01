@@ -1,0 +1,13 @@
+<div class="user-card">
+  <div class="user-image">
+    <%= image_tag user.photo %>
+  </div>
+  <div class="user-details flex-column">
+    <h3>
+      <%= link_to user.name, user_path(user) %>
+    </h3>
+    <p class="post-count">
+      Number of post: <%= user.posts.count %>
+    </p>
+  </div>
+</div>

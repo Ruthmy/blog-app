@@ -13,3 +13,139 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --font: 'Montserrat', sans-serif;
+  --font-title: 3rem;
+  --font-p-size: 1.4rem;
+  --font-h2-size: 2.5rem;
+  --font-h3-size: 2rem;
+  --font-count-size: 1.2rem;
+  --background: #e8e8e8;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+
+  /* outline: 1px solid red !important; */
+}
+
+body {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  padding: 2rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Font styles */
+
+h1 { font-size: var(--font-title); }
+
+h2 { font-size: var(--font-h2-size); }
+
+h3 { font-size: var(--font-h3-size); }
+
+p { font-size: var(--font-p-size); }
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+/* show users view */
+
+.bio {
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.posts {
+  padding: 2rem 2rem;
+}
+
+.all-posts {
+  padding: 1rem;
+  align-items: center;
+}
+
+.see-all-post {
+  text-align: center;
+  font-size: var(--font-p-size);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #88a8c2;
+  cursor: pointer;
+}
+
+/* Post card & Post comment card Partials */
+
+.post-item,
+.post-comments {
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+}
+
+.counter {
+  text-align: right;
+}
+
+.comments {
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.see-post-link {
+  text-align: center;
+  font-size: var(--font-p-size);
+}
+
+/* User Card Partial */
+
+.user-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.user-image img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.user-details {
+  flex-grow: 1;
+  text-align: left;
+  gap: 1rem;
+}
+
+.post-count {
+  font-size: var(--font-count-size);
+  text-align: right;
+}

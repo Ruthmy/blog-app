@@ -1,0 +1,12 @@
+<div class="post-item flex-column">
+    <!-- Render post_recent to show the last 3 post -->
+    <% @user.post_recent.each_with_index do |post, index| %>
+        <h3><%= link_to "Post # #{index + 1} #{post.title}", user_post_path(@user, post), class: "post-title" %></h3>
+        <p>
+            <%= post.text %>
+        </p>
+        <p class="counter">
+            Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+        </p>
+    <% end %>
+</div>

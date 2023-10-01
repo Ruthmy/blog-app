@@ -1,31 +1,20 @@
-<h1>Show/Deatils users</h1>
 <% if @user %>
 	<section class="user">
-		<div>
-			<%= image_tag @user.photo, width: 100 %>
-			<%= link_to @user.name, user_path(@user) %>
-			Number of post: <%= @user.posts.count %>
+		<div>			
+			<%= render partial: "shared/user_card", locals: { user: @user } %>
 		</div>
 	</section>
-	<section class="bio">
+	<section class="bio flex-column">
 		<h3>Bio</h3>
 		<p><%= @user.bio %></p>
 	</section>
-	<section class="posts">
-		<div>
-			<!-- Render post_recent to show the last 3 post -->
-			<% @user.post_recent.each_with_index do |post, index| %>
-				<h3>Post # <%= index + 1 %> <span><%= post.title %></span></h3>
-				<p><%= post.text %></p>
-				<p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-				<%= link_to "See post", user_post_path(@user, post) %>
-			<% end %>
-		</div>
-		<br><br>
-		<div>
-			<%= link_to "See all post", user_posts_path(@user) %>
+	<section class="posts flex-column">
+		<%= render partial: "shared/post_card", locals: { user: @user.post_recent } %>
+		<div class="all-posts flex-column">
+			<%= link_to "See all post", user_posts_path(@user), class: "see-all-post" %>
 		</div>
 	</section>
 <% else %>
 	<p>404 - User not found</p>
 <% end %>
+<p><%= link_to "Back", :back %></p>
