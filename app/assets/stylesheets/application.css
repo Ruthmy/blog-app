@@ -67,11 +67,15 @@ h2 { font-size: var(--font-h2-size); }
 
 h3 { font-size: var(--font-h3-size); }
 
-p { font-size: var(--font-p-size); }
+p,
+label,
+a { font-size: var(--font-p-size); }
 
 a { text-decoration: none; }
 
 li { list-style: none; }
+
+label { margin-bottom: 0.5rem; }
 
 /* show users view */
 
