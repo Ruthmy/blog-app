@@ -3,7 +3,7 @@
     <h4>(with the current user: <%= @user.name %>)</h4>
 
     <% if flash[:alert].present? %>
-        <div class="alert notice italic font-bold text-xl text-red-500 text-center py-2">
+        <div class="alert">
             <%= flash[:alert] %>
         </div>
     <% end %>
