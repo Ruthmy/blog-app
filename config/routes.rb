@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index] do
     resources :posts, only: [:show, :index, :new, :create] do
+      resources :comments, only: [:new, :create]
+      resources :likes, only: [:create]
       # Paginate post with kaminari
       get '/page/:page', action: :index, on: :collection
     end
-    resources :comments, only: [:new, :create]
-    resources :likes, only: [:create]
   end
 end
