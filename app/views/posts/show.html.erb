@@ -6,6 +6,12 @@
     <p class="counter"><i>Comments: <%= @posts.comments_counter %>, Likes: <%= @posts.likes_counter %></i></p>
     <br><br>
   </div>
+  <div class="add-like">
+    <%= form_tag user_post_likes_path(@posts.author, @posts), method: :post do %>
+      <%= hidden_field_tag :id, @posts.id %>
+      <%= image_tag 'heart.png', alt: 'Like button', class: 'cursor-pointer', onclick: 'this.closest("form").submit();', width: 25 %>
+    <% end %>
+  </div>
   <div class="post-content">
     <p>
       <%= @posts.text %>
