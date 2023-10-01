@@ -1,0 +1,17 @@
+<section class="form-post">
+    <h1>Create a new Post</h1>
+    <h4>(for the current user: <%= @user.name %>)</h4>
+    
+    <%= form_with model: [@user, @new_post] do |form| %>
+        <div class="form-post_title flex-column">
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+        </div>
+        <div class="form-post_text flex-column">
+            <%= form.label :text %>
+            <%= form.text_area :text, size: "30x5" %>
+        </div>
+        <%= form.submit %>
+    <% end %>
+</section>
+<p><%= link_to "Back", :back %> | <%= render partial: "shared/link_main" %></p>
