@@ -3,7 +3,7 @@
     <h2>
       Post # by <%= @user.name %>
     </h2>
-    <p class="counter"><i>Comments:x, Likes:y</i></p>
+    <p class="counter"><i>Comments: <%= @posts.comments_counter %>, Likes: <%= @posts.likes_counter %></i></p>
     <br><br>
   </div>
   <div class="post-content">
