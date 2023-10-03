@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     # List all post from a user
     @user = User.find_by(id: params[:user_id])
     # All posts from a user and paginate them
-    @posts = @user.posts.page(params[:page]).per(4)
+    @posts = @user.posts.includes(:author, :likes, :comments).page(params[:page]).per(4)
   end
 
   def show
