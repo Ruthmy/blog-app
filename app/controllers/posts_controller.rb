@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   def show
     @user = User.find_by(id: params[:user_id])
     # found the post which 'id' is the same as the parameter 'id' on the URL
-    @posts = Post.find(params[:id])
+    @posts = Post.includes(:author, :likes, :comments).find(params[:id])
   end
 
   def new
