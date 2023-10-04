@@ -1,3 +1,10 @@
+<% if flash[:alert].present? %>
+	<section class="flash-alert">
+		<div class="alert">
+			<p><%= flash[:alert] %></p>
+		</div>
+	</section>
+<% end %>
 <section class="form-post">
     <h1>Create a new Post</h1>
     <h4>(for the current user: <%= @user.name %>)</h4>
