@@ -1,3 +1,10 @@
+<% if flash[:notice].present? %>
+	<section class="flash-alert">
+		<div class="alert">
+			<p><%= flash[:notice] %></p>
+		</div>
+	</section>
+<% end %>
 <% if @user %>
 	<section class="user">
 		<div>			
