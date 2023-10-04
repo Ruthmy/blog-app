@@ -149,6 +149,11 @@ rspec spec
 - Twitter [@rury_exe](https://twitter.com/rury_exe)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ruth-abreu)
 
+👤 Pablo Bonasera
+- Github: [@PabloBona](https://github.com/PabloBona)
+- Linkedin: [Pablo Bonasera](https://www.linkedin.com/in/pablo-bonasera/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
