@@ -1,3 +1,10 @@
+<% if flash[:alert].present? %>
+	<section class="flash-alert">
+		<div class="alert">
+			<p><%= flash[:alert] %></p>
+		</div>
+	</section>
+<% end %>
 <section class="add-message">
     <h2>Add new Comment</h2>
     <h4>(with the current user: <%= @user.name %>)</h4>
