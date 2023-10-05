@@ -22,6 +22,8 @@
   --font-h3-size: 2rem;
   --font-count-size: 1.2rem;
   --background: #e8e8e8;
+  --very-light-grey: #e8e8e8;
+  --blue-color: #4386bf;
 }
 
 html {
@@ -69,13 +71,24 @@ h3 { font-size: var(--font-h3-size); }
 
 p,
 label,
-a { font-size: var(--font-p-size); }
+a,
+input::placeholder { font-size: var(--font-p-size); }
 
 a { text-decoration: none; }
 
 li { list-style: none; }
 
 label { margin-bottom: 0.5rem; }
+
+input[type='submit'] {
+  cursor: pointer;
+  font-size: var(--font-p-size);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--blue-color);
+  color: white;
+}
 
 /* show users view */
 
@@ -170,3 +183,37 @@ label { margin-bottom: 0.5rem; }
   font-size: var(--font-count-size);
   text-align: right;
 }
+
+/* Devise registration form */
+
+.form-inputs {
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.form-inputs input,
+.form-inputs textarea {
+  width: 100%;
+  height: 3.5rem;
+  border: 1px;
+  border-color: var(--very-light-grey);
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: var(--font-p-size);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-inputs textarea {
+  height: 10rem;
+}
+
+.form-actions {
+  margin-bottom: 2rem;
+}
+
+.form-check input[type='checkbox'] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
