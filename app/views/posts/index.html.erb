@@ -1,11 +1,14 @@
-<section class="post-index">
-  <%= render partial: "shared/user_card", locals: { user: @user } %>
-  <div class="all-post">
-    <%= render partial: "shared/post_comment_card", locals: { posts: @posts } %>
-    <!-- Pagination with kaminari -->
-    <h3><center><%= paginate @posts %></center></h3>    
-  </div>
-  <br><br>
-  <p><%= link_to "Back", :back %> | <%= render partial: "shared/link_main" %></p>
-  
-</section>
+<% if @posts.empty? %>
+  <h3><center>There are no posts yet.</center></h3>
+<% else %>
+  <section class="post-index">
+    <%= render partial: "shared/user_card", locals: { user: @user } %>
+    <div class="all-post">
+      <%= render partial: "shared/post_comment_card", locals: { posts: @posts } %>
+      <!-- Pagination with kaminari -->
+      <h3><center><%= paginate @posts %></center></h3>    
+    </div>
+  </section>
+<% end %>
+<br><br>
+<p><%= link_to "Back", :back %> | <%= render partial: "shared/link_main" %></p>
