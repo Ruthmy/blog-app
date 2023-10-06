@@ -217,3 +217,7 @@ input[type='submit'] {
   margin-right: 0.5rem;
 }
 
+.form-actions .login {
+  width: 100%;
+}
+
