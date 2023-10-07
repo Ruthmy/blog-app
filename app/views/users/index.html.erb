@@ -1,3 +1,9 @@
+<% unless user_signed_in? %>
+  <section class="signup-section flex-column">
+    <%= link_to "New user? Sign up" , new_user_registration_path %>
+    <%= link_to "Already have an account? Sign in" , new_user_session_path %>
+  </section>
+<% end %>
 <section class="user-list">
   <% if @users %>
     <% @users.each do |user| %>
@@ -7,6 +13,8 @@
     <p>There's no users, please</p>
   <% end %>
 </section>
-<section class="add-section flex-column">
-  <%= link_to "Add a new post", new_user_post_path(@users) %>
-</section>
+<% if user_signed_in? %>
+  <section class="add-section flex-column">
+    <%= link_to "Add a new post", new_user_post_path(@users) %>
+  </section>
+<% end %>

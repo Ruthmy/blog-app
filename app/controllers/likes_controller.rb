@@ -1,4 +1,6 @@
 class LikesController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     @post = Post.find(params[:post_id])
     @like = Like.new(post: @post, user: current_user)
